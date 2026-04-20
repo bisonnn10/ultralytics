@@ -60,6 +60,9 @@ from .block import (
     SCDown,
     TorchVision,
 )
+
+from .cbam import CBAM
+
 from .conv import (
     CBAM,
     ChannelAttention,
