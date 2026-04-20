@@ -7,6 +7,9 @@ import types
 from copy import deepcopy
 from pathlib import Path
 
+# TAMBAHKAN BARIS INI DI BAWAH
+from .modules.cbam import CBAM
+
 import torch
 import torch.nn as nn
 
