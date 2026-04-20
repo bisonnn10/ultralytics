@@ -35,12 +35,12 @@ class SpatialAttention(nn.Module):
         return self.sigmoid(self.conv(x))
 
 class CBAM(nn.Module):
-       def __init__(self, c1, c2=None, ratio=16, kernel_size=7):
+    def __init__(self, c1, c2=None, ratio=16, kernel_size=7):
         super(CBAM, self).__init__()
-        # Jika c2 tidak dikirim, kita samakan dengan c1 (input channels)
+        # Fix untuk error argumen tadi
         if c2 is None:
             c2 = c1
-        
+            
         self.channel_attention = ChannelAttention(c1, ratio)
         self.spatial_attention = SpatialAttention(kernel_size)
 
